@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# Tooling
+.ruff_cache/
+.pytest_cache/
+
+# Результаты транскрибации
+transcription*.txt
+*.srt
+
+# Скачанные медиа
+*.wav
+*.mp3
+*.m4a
+*.webm
+*.mp4
+
+models/
+
+# Окружение и секреты
+.env
+.env.local
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/

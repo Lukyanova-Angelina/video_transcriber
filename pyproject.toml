@@ -1,0 +1,35 @@
+[project]
+name = "video-transcriber"
+version = "0.1.0"
+description = "Транскрибация YouTube/VK видео в текст через faster-whisper"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "faster-whisper>=1.0.0",
+    "yt-dlp>=2024.0.0",
+    "av<19",
+    "nvidia-cublas-cu12>=12.9.3.13",
+    "nvidia-cudnn-cu12==9.*",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.5.0",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "SIM", # flake8-simplify
+]
+ignore = [
+    "E501", # length обрабатывается line-length
+]
